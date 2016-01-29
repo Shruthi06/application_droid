@@ -1,0 +1,56 @@
+package com.example.twotext_buttonexample;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	
+	Button clickok;
+	EditText msg1,msg2;
+	TextView dispalytext1, displaytext2;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		clickok=(Button) findViewById(R.id.buttonok);
+		msg1=(EditText) findViewById(R.id.editmessage1);
+		msg2=(EditText) findViewById(R.id.editmessage2);
+		dispalytext1=(TextView) findViewById(R.id.dispalytext1);
+		displaytext2=(TextView) findViewById(R.id.displaytext2);
+		//dispalytext1.setOnClickListener(MainActivity.this);
+		//displaytext2.setOnClickListener(MainActivity.this);
+		
+	}
+	
+	public void ondisplayClick(View v)
+	{
+			
+			String s1=msg1.getText().toString();
+			String s2=msg2.getText().toString();
+			
+			dispalytext1.setText(msg1.getText().toString());
+			//dispalytext1.setText(" ");
+			dispalytext1.setText(msg2.getText().toString());
+			
+			//dispalytext.setText(" ");
+			//dispalytext.setText(msg2.getText().toString());
+			
+		
+	}
+
+	/*@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+*/
+	
+}
